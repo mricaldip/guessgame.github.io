@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el Número!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+<!--Game container-->
+        <div class="game-container">
+        <header>
+            <h1><strong>Adivina el Número!</strong></h1>
+        </header>
+
+        <div class="rounds">
+            <p class="round-label">Ronda <span id="round-number">1</span></p>
+            <p class="guess-label">
+            Target Número: <span id="target-number">?</span>
+            </p>
+        </div>
+
+        <div class="guessing-area">
+            <div class="guess computer-guess">
+            <div class="guess-title">
+                <p class="guess-label">Computadora</p>
+                <p class="score-label">Puntaje: <span id="computer-score">0</span></p>
+            </div>
+                <p id="computer-guess">?</p>
+                <p class="winning-text" id="computer-wins"></p>
+            </div>
+            <div class="guess human-guess">
+            <div class="guess-title">
+                <p class="guess-label">Tú</p>
+                <p class="score-label">Puntaje: <span id="human-score">0</span></p>
+            </div>
+            <input type="number" id="human-guess" min="0" max="9" value="0" />
+            <div class="number-controls">
+                <button class="number-control left" id="subtract" disabled>
+                -
+                </button>
+                <button class="number-control right" id="add">+</button>
+            </div>
+            <button class="button" id="guess">Adivina!</button>
+            </div>
+        </div>
+
+        <div class="next-round-container">
+            <button class="button" id="next-round" disabled>Siguiente ronda</button>
+        </div>
+        </div>
+    <!--instructions-->
+        <div class="instructions">
+        <div class="instruction">
+            <h3>Paso 1</h3>
+            <p>Ingresa un número entre 0 y 9</p>
+        </div>
+        <div class="instruction">
+            <h3>Paso 2</h3>
+            <p>
+            Click "Adivina!" para enviar su elección y ver quién ganó la ronda.
+            </p>
+        </div>
+        <div class="instruction">
+            <h3>Paso 3</h3>
+            <p>Click "Siguiente Ronda" para jugar otra vez.</p>
+        </div>
+        </div>
+
+        <script src="./script.js"></script>
+        <script src="./game.js"></script>
+    </body>
+</html>
